@@ -52,7 +52,6 @@ jobs:
           if($rt -gt 360){$rt=355}
           "RUNTIME_MINUTES=$rt"|Out-File -Append $env:GITHUB_ENV
           Write-Host "Runtime set to $rt minutes"
-    steps:
       - name: Set Indian Date and Time
         shell: pwsh
         run: |
