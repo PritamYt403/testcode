@@ -52,6 +52,23 @@ jobs:
           if($rt -gt 360){$rt=355}
           "RUNTIME_MINUTES=$rt"|Out-File -Append $env:GITHUB_ENV
           Write-Host "Runtime set to $rt minutes"
+    steps:
+      - name: Set Indian Date and Time
+        shell: pwsh
+        run: |
+          Set-TimeZone -Id "India Standard Time"
+          Get-Date -Format "dd-MM-yyyy hh:mm:ss tt"
+
+      - name: Check Graphics
+        shell: pwsh
+        run: |
+          Get-CimInstance Win32_VideoController |
+            Select-Object Name, DriverVersion, VideoProcessor |
+            Format-List
+
+      - name: Decide runtime
+        run: |
+          # তোমার আগের runtime code এখানে থাকবে
 
       - name: Install + Configure Tailscale
         run: |
