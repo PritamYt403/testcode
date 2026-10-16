@@ -42,7 +42,7 @@ jobs:
     timeout-minutes: 400
     env:
       RDP_USER: PritamGaming
-      RDP_PASS: @Herobrine99
+      RDP_PASS: "@Herobrine99"
 
     steps:
       - name: Decide runtime
