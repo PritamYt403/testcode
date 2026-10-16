@@ -66,9 +66,6 @@ jobs:
             Select-Object Name, DriverVersion, VideoProcessor |
             Format-List
 
-      - name: Decide runtime
-        run: |
-
       - name: Install + Configure Tailscale
         run: |
           $ts="$env:ProgramFiles\Tailscale\tailscale.exe"
