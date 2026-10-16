@@ -68,7 +68,6 @@ jobs:
 
       - name: Decide runtime
         run: |
-          # তোমার আগের runtime code এখানে থাকবে
 
       - name: Install + Configure Tailscale
         run: |
