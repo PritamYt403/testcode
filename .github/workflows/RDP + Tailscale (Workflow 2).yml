@@ -1,4 +1,4 @@
-name: RDP + Tailscale (Workflow 1)
+name: RDP + Tailscale (Workflow 2)
 
 on:
   workflow_dispatch:
